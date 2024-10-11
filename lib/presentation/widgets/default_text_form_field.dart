@@ -51,16 +51,16 @@ class _DefaultTextFormFieldState extends State<DefaultTextFormField> {
         )
         :null,
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(width: 1.sp, color:  ColorsManager.gray)),
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(width: 1.sp, color:  ColorsManager.grey)),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(width: 2.sp, color: ColorsManager.gray)),
+            borderRadius: BorderRadius.circular(8.r),
+            borderSide: BorderSide(width: 2.sp, color: ColorsManager.grey)),
         focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8.r),
             borderSide: BorderSide(width: 2.sp,color: ColorsManager.error)),
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8.r),
             borderSide: BorderSide(width: 1.sp,color: ColorsManager.error)),
 
       ),

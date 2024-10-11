@@ -13,7 +13,7 @@ class ThemeManager {
           titleTextStyle:TextStyle(color: ColorsManager.blackBase, fontSize: 20.sp, fontWeight: FontWeight.w500,)),
           textTheme:  TextTheme(
           titleLarge: TextStyle(color: ColorsManager.blackBase, fontSize: 18.sp, fontWeight: FontWeight.w500,),
-          labelSmall: TextStyle(color: ColorsManager.gray, fontSize: 12.sp, fontWeight: FontWeight.w400,),
+          labelSmall: TextStyle(color: ColorsManager.grey, fontSize: 12.sp, fontWeight: FontWeight.w400,),
           bodyMedium:  TextStyle(color: ColorsManager.blackBase, fontSize: 14.sp, fontWeight: FontWeight.w400,)),
       bottomNavigationBarTheme:  BottomNavigationBarThemeData(
         backgroundColor: ColorsManager.lightBlue,
