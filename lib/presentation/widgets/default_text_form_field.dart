@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/theming/colors_manager.dart';
 
-
 typedef Validator = String? Function(String?);
 
 class DefaultTextFormField extends StatefulWidget {
@@ -35,45 +34,42 @@ class _DefaultTextFormFieldState extends State<DefaultTextFormField> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: TextFormField(
-        decoration: InputDecoration(
-          floatingLabelBehavior: FloatingLabelBehavior.always,
-          label: Text(widget.label,
-              style: Theme.of(context)
-                  .textTheme
-                  .labelSmall),
-          hintText: widget.hintText ,
-          hintStyle:Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorsManager.placeHolder),
-          suffixIcon: widget.isPassword?
-          IconButton(onPressed: () => setState(()=> isObscure =!isObscure),
-              icon: isObscure
-                  ?const Icon(Icons.visibility_outlined)
-                  :const Icon(Icons.visibility_off_outlined)
-          )
-          :null,
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(width: 1.sp, color:  ColorsManager.gray)),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(width: 2.sp, color: ColorsManager.gray)),
-          focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(width: 2.sp,color: ColorsManager.error)),
-          errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.r),
-              borderSide: BorderSide(width: 1.sp,color: ColorsManager.error)),
+    return TextFormField(
+      decoration: InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        label: Text(widget.label,
+            style: Theme.of(context)
+                .textTheme
+                .labelSmall),
+        hintText: widget.hintText ,
+        hintStyle:Theme.of(context).textTheme.bodyMedium?.copyWith(color: ColorsManager.placeHolder),
+        suffixIcon: widget.isPassword?
+        IconButton(onPressed: () => setState(()=> isObscure =!isObscure),
+            icon: isObscure
+                ?const Icon(Icons.visibility_outlined)
+                :const Icon(Icons.visibility_off_outlined)
+        )
+        :null,
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide(width: 1.sp, color:  ColorsManager.gray)),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide(width: 2.sp, color: ColorsManager.gray)),
+        focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide(width: 2.sp,color: ColorsManager.error)),
+        errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide(width: 1.sp,color: ColorsManager.error)),
 
-        ),
-        cursorColor:ColorsManager.blueBase,
-        style: Theme.of(context).textTheme.bodyMedium,
-        keyboardType: widget.keyBoard,
-        obscureText: isObscure,
-        controller: widget.controller,
-        validator: widget.validator,
       ),
+      cursorColor:ColorsManager.blueBase,
+      style: Theme.of(context).textTheme.bodyMedium,
+      keyboardType: widget.keyBoard,
+      obscureText: isObscure,
+      controller: widget.controller,
+      validator: widget.validator,
     );
   }
 }

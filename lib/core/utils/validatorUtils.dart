@@ -1,4 +1,4 @@
-class Validator{
+class ValidatorUtils{
 
   static bool isEmail(String? value){
     if(value==null || value.isEmpty) return false;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class DialogUtils {
@@ -10,7 +11,7 @@ class DialogUtils {
         return AlertDialog(
           content: Row(
               children: [CircularProgressIndicator(),
-                SizedBox(width: 12),
+                SizedBox(width: 12.w),
                 Text(message,)]),
         );
       },
