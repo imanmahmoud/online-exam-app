@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:online_exam_app/core/theming/theme_manager.dart';
 import 'package:online_exam_app/presentation/screens/login/login_screen.dart';
+import 'package:online_exam_app/presentation/screens/register/register_screen.dart';
 
 class OnlineExamApp extends StatelessWidget {
 
@@ -18,9 +19,10 @@ class OnlineExamApp extends StatelessWidget {
         title: 'Online Exam',
         theme: ThemeManager.mainTheme,
         routes: {
-          LoginScreen.routeName :(_) => const LoginScreen()
+          LoginScreen.routeName :(_) => const LoginScreen(),
+          RegisterScreen.routeName :(_) => const RegisterScreen(),
         },
-        initialRoute:LoginScreen.routeName,
+        initialRoute:RegisterScreen.routeName,
 
       ) ,
 
